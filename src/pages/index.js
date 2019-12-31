@@ -8,16 +8,13 @@ import Seo from '../components/seo'
 const IndexPage = () => (
   <Layout>
     <Seo title='Shortly' />
-    <header>
-      <h1>Shortly</h1>
-    </header>
-    <main>
+    <section>
       <h1>More than just shorter links</h1>
       <p>
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
       </p>
-    </main>
+    </section>
   </Layout>
 )
 

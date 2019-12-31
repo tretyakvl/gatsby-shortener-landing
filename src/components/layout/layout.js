@@ -1,14 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// import Header from './header'
+import 'normalize.css'
 import './layout.css'
-import './global.css'
 
 const Layout = ({ children }) => {
   return (
     <>
-      {children}
+      <header>
+        <h1>Shortly</h1>
+      </header>
+      <main>
+        {children}
+      </main>
+      <footer>
+      footer
+      </footer>
     </>
   )
 }
