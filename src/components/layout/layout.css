@@ -17,6 +17,8 @@
 :root {
   --textColor: hsl(0, 0%, 75%);
   --headerColor: hsl(257, 27%, 26%);
+
+  --bgDark: hsl(257, 27%, 26%);
 }
 
 body {
