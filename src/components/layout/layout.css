@@ -16,6 +16,7 @@
 - Very Dark Violet: hsl(260, 8%, 14%) */
 :root {
   --textColor: hsl(0, 0%, 75%);
+  --linkColor: hsl(257, 7%, 63%);
   --headerColor: hsl(257, 27%, 26%);
 
   --bgDark: hsl(257, 27%, 26%);

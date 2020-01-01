@@ -6,8 +6,8 @@ import logo from '../../images/logo.svg'
 const Header = () => (
   <header className={style.header}>
     <img src={logo} alt='Shortly logo' />
-    <button>
-      Open menu
+    <button className={style.header__button}>
+      Open/close menu
     </button>
     <nav className={style.header__navigation}>
       <ul className={style.header__links}>
