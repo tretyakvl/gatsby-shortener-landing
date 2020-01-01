@@ -34,6 +34,7 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -64,12 +65,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   color: var(--headerColor);
-  text-align: center;
 }
 
 p {
   font-size: 1.1rem;
   line-height: 1.7;
   word-spacing: 0.1em;
-  text-align: center;
 }

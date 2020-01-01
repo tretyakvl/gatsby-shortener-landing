@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Header from '../header/header'
+
 import 'normalize.css'
 import './layout.css'
 
 const Layout = ({ children }) => {
   return (
     <>
-      <header>
-        <h1>Shortly</h1>
-      </header>
+      <Header />
       <main>
         {children}
       </main>
