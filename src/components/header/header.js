@@ -1,14 +1,14 @@
 import React from 'react'
 
+import Hamburger from '../hamburger/hamburger.js'
+
 import style from './header.module.css'
 import logo from '../../images/logo.svg'
 
 const Header = () => (
   <header className={style.header}>
     <img src={logo} alt='Shortly logo' />
-    <button className={style.header__button}>
-      Open/close menu
-    </button>
+    <Hamburger />
     <nav className={style.header__navigation}>
       <ul className={style.header__links}>
         <li>
