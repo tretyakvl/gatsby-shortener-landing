@@ -34,8 +34,8 @@
     position: absolute;
     top: calc(var(--height) - 0.875rem);
     right: var(--sidePadding);
-    left: var(--sidePadding);
 
+    width: 20.4rem;
     padding: 2rem;
 
     color: hsl(0, 100%, 100%);

@@ -15,10 +15,7 @@ const Path = props => (
 
 const Hamburger = ({ isOpen, onClick }) => {
   return (
-    <motion.button
-      className={style.hamburger}
-      onClick={onClick}
-    >
+    <motion.button className={style.hamburger} onClick={onClick}>
       <svg width='25' height='25' viewBox='0 0 25 25'>
         <Path
           variants={{
@@ -44,9 +41,7 @@ const Hamburger = ({ isOpen, onClick }) => {
           animate={isOpen ? 'open' : 'closed'}
         />
       </svg>
-      <span className='visually-hidden'>
-        Open/close menu
-      </span>
+      <span className='visually-hidden'>Open/close menu</span>
     </motion.button>
   )
 }

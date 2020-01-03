@@ -3,6 +3,8 @@
 
   border: none;
   background-color: transparent;
+
+  outline: none;
 }
 
 .hamburger svg {

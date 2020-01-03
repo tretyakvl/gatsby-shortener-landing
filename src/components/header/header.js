@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 import Hamburger from '../hamburger/hamburger.js'
 
@@ -9,10 +10,31 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false)
 
   return (
-    <header className={style.header}>
+    <header
+      className={style.header}
+    >
       <img src={logo} alt='Shortly logo' />
       <Hamburger isOpen={isOpen} onClick={() => setOpen(!isOpen)} />
-      <nav className={style.header__navigation}>
+      <motion.nav
+        className={style.header__navigation}
+        transition={{
+          type: 'spring',
+          stiffness: 400,
+          damping: 40
+        }}
+        variants={{
+          closed: {
+            'clip-path': 'circle(0% at 110% -10%)',
+            transition: {
+              delay: 0.5
+            }
+          },
+          open: {
+            'clip-path': 'circle(160% at 110% -10%)'
+          }
+        }}
+        animate={isOpen ? 'open' : 'closed'}
+      >
         <ul className={style.header__links}>
           <li>
             <a href=''>Features</a>
@@ -28,10 +50,9 @@ const Header = () => {
           <li><a href=''>Login</a></li>
           <li><a href=''>Sing Up</a></li>
         </ul>
-      </nav>
+      </motion.nav>
     </header>
   )
 }
-console.log(style)
 
 export default Header
