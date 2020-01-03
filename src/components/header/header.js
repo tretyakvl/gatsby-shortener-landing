@@ -24,10 +24,7 @@ const Header = () => {
         }}
         variants={{
           closed: {
-            'clip-path': 'circle(0% at 110% -10%)',
-            transition: {
-              delay: 0.5
-            }
+            'clip-path': 'circle(0% at 110% -10%)'
           },
           open: {
             'clip-path': 'circle(160% at 110% -10%)'
