@@ -1,8 +1,8 @@
-.hav {
+.navMobile {
   position: realtive;
 }
 
-.nav__dropdown {
+.navMobile__dropdown {
   position: absolute;
   top: calc(var(--height) - 0.875rem);
   right: var(--sidePadding);
@@ -20,34 +20,34 @@
   border-radius: 10px;
 }
 
-.nav__dropdown > :first-child {
+.navMobile__dropdown > :first-child {
   padding-bottom: 1.5rem;
   border-bottom: 2px solid hsla(0, 100%, 100%, 0.2);
 }
 
-.nav__dropdown > :last-child {
+.navMobile__dropdown > :last-child {
   padding-top: 1.5rem;
 }
 
-.nav__links {
+.navMobile__links {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.nav__links a {
+.navMobile__links a {
   display: inline-block;
 
   color: inherit;
   text-decoration: none;
 }
 
-.nav__links > * + * {
+.navMobile__links > * + * {
   margin-top: 1rem;
 }
 
-.nav__links a {
+.navMobile__links a {
   padding: 0 0.5rem;
 
   line-height: 2.3;

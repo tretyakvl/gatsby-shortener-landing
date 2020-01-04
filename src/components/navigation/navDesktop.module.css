@@ -1,0 +1,45 @@
+.navDesktop {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  padding: 0 1.5rem;
+}
+
+.navDesktop__navigation {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+
+  margin-left: 2.7rem;
+
+  color: var(--linkColor);
+}
+
+.navDesktop__links {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navDesktop__links:first-child {
+  padding-right: 1.9rem;
+}
+
+.navDesktop__links a {
+  display: inline-block;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.navDesktop__links + .navDesktop__links {
+  margin-left: auto;
+}
+
+.navDesktop__links > * + * {
+  margin-left: 1.9rem;
+}

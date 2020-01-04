@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-
-import style from './navigationMobiel.module.css'
 
 import Hamburger from '../hamburger/hamburger.js'
 
-const NavigationMobile = ({ fields, isOpen }) => {
+import style from './navMobile.module.css'
+
+const NavigationMobile = ({ fields }) => {
+  const [isOpen, setOpen] = useState(false)
+
   return (
-    <nav className={style.nav}>
+    <nav className={style.navMobile}>
       <Hamburger isOpen={isOpen} onClick={() => setOpen(!isOpen)} />
-      <div
-        className={style.nav__dropdown}
+      <motion.div
+        className={style.navMobile__dropdown}
         transition={{
           type: 'spring',
           stiffness: 400,
@@ -26,7 +28,7 @@ const NavigationMobile = ({ fields, isOpen }) => {
         }}
         animate={isOpen ? 'open' : 'closed'}
       >
-        <ul className={style.nav__links}>
+        <ul className={style.navMobile__links}>
           <li>
             <a href=''>Features</a>
           </li>
@@ -37,11 +39,11 @@ const NavigationMobile = ({ fields, isOpen }) => {
             <a href=''>Resources</a>
           </li>
         </ul>
-        <ul className={style.nav__links}>
+        <ul className={style.navMobile__links}>
           <li><a href=''>Login</a></li>
           <li><a href=''>Sing Up</a></li>
         </ul>
-      </div>
+      </motion.div>
     </nav>
   )
 }

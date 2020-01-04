@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Navigation = ({ isMobile }) => {
+import NavMobile from './navMobile'
+import NavDesktop from './navDesktop'
+
+const Navigation = () => {
   const fields = ['Features', 'Pricing', 'Resources']
 
   return (
-    <div />
+    <NavDesktop />
   )
 }
 

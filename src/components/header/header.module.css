@@ -14,32 +14,3 @@
   margin: 0 auto;
   padding: 0 var(--sidePadding);
 }
-
-@media(min-width: 40.625rem) {
-  .header {
-    --height: 8.75rem;
-    padding: 0 1.5rem;
-  }
-
-  .header__navigation {
-    display: flex;
-    flex: 1 0 auto;
-    align-items: center;
-
-    margin-left: 2.7rem;
-
-    color: var(--linkColor);
-  }
-
-  .header__links {
-    display: flex;
-  }
-
-  .header__links + .header__links {
-    margin-left: auto;
-  }
-
-  .header__links > * + * {
-    margin-left: 1.9rem;
-  }
-}

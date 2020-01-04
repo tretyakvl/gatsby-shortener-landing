@@ -12,9 +12,3 @@
   width: 1.8rem;
   height: auto;
 }
-
-@media(min-width: 40.625rem) {
-  .hamburger {
-    display: none;
-  }
-}
