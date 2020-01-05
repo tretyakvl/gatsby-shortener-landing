@@ -1,7 +1,4 @@
 .header {
-  --height: 6.875rem;
-  --sidePadding: 1.5rem;
-
   position: relative;
 
   display: flex;
@@ -10,7 +7,13 @@
   align-items: center;
 
   max-width: 71.875rem;
-  height: var(--height);
+  height: 6.875rem;
   margin: 0 auto;
-  padding: 0 var(--sidePadding);
+  padding: 0  1.5rem;
+}
+
+@media(min-width: 41.25rem) {
+  .header {
+    height: 9rem;
+  }
 }

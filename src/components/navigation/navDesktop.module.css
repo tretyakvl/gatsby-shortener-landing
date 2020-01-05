@@ -12,8 +12,6 @@
   align-items: center;
 
   margin-left: 2.7rem;
-
-  color: var(--linkColor);
 }
 
 .navDesktop__links {
@@ -32,8 +30,15 @@
 .navDesktop__links a {
   display: inline-block;
 
-  color: inherit;
+  color: var(--linkColor);
   text-decoration: none;
+  text-transform: capitalize;
+
+  transition: color 100ms linear;
+}
+
+.navDesktop__links a:hover {
+  color: var(--linkHover);
 }
 
 .navDesktop__links + .navDesktop__links {

@@ -1,20 +1,19 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import style from './navDesktop.module.css'
 
-const navDesktop = () => {
+const LinkItem = ({ to }) => (
+  <li>
+    <Link to={`/${to}`}>{to}</Link>
+  </li>
+)
+
+const navDesktop = ({ fields }) => {
   return (
     <nav className={style.navDesktop}>
       <ul className={style.navDesktop__links}>
-        <li>
-          <a href=''>Features</a>
-        </li>
-        <li>
-          <a href=''>Pricing</a>
-        </li>
-        <li>
-          <a href=''>Resources</a>
-        </li>
+        {fields.map(field => <LinkItem to={field} key={field} />)}
       </ul>
       <ul className={style.navDesktop__links}>
         <li><a href=''>Login</a></li>

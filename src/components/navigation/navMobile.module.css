@@ -4,8 +4,8 @@
 
 .navMobile__dropdown {
   position: absolute;
-  top: calc(var(--height) - 0.875rem);
-  right: var(--sidePadding);
+  top: 6rem;
+  right: 1.5rem;
 
   width: 20.4rem;
   padding: 2rem;
@@ -41,6 +41,7 @@
 
   color: inherit;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .navMobile__links > * + * {
