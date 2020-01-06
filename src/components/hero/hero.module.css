@@ -4,13 +4,13 @@
   flex-wrap: wrap;
   align-items: center;
 
-  padding-top: 97.5%;
+  padding-top: 22.8rem;
 
   text-align: center;
 
   background: url("../../images/illustration-working.svg") no-repeat;
-  background-position: 1.5rem 0;
-  background-size: 133%;
+  background-position: calc(50% + 5.4rem) 0;
+  background-size: 31.25rem;
 }
 
 .hero__container {
@@ -38,8 +38,13 @@
   }
 
   .hero__container {
-    padding-left: 13.5%;
-    padding-right: 48%;
+    max-width: 71.875rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero__container > * {
+    max-width: 36rem
   }
 
   .hero__header {
