@@ -27,6 +27,7 @@
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 
   min-width: 22.5rem;
   margin: 0 auto;
