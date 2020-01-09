@@ -8,6 +8,7 @@ const Button = (props) => {
     <motion.span
       className={style.button}
       whileTap={{ scale: 0.9 }}
+      whileHover={{ opacity: 0.5 }}
     >
       {props.children}
     </motion.span>
