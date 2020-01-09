@@ -6,13 +6,11 @@ import Seo from '../components/seo'
 import Hero from '../components/hero/hero'
 
 const IndexPage = ({ data }) => {
-  console.log(data.indexYaml)
-
   return (
     <Layout>
       <Seo title='Shortly' />
       <h1 className='visually-hidden'>{data.indexYaml.title}</h1>
-      <Hero />
+      <Hero {...data.indexYaml.sections.hero} />
     </Layout>
   )
 }

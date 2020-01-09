@@ -1,9 +1,16 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
+import Button from '../button/button'
 import illustration from '../../images/illustration-working.svg'
 import style from './hero.module.css'
 
-const Hero = () => {
+const Hero = ({
+  title,
+  desc,
+  illustration: publicUrl,
+  cta: { text, to }
+}) => {
   return (
     <section className={style.hero}>
       <img
@@ -18,7 +25,12 @@ const Hero = () => {
           Build your brand’s recognition and get detailed insights on how your
           links are performing.
         </p>
-        <a>Get Started</a>
+        <Button>
+          <Link to={to}>{text}</Link>
+        </Button>
+        <Button>
+          <Link to={to}>{text}</Link>
+        </Button>
       </div>
     </section>
   )
