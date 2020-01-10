@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Seo from '../components/seo'
 import Hero from '../components/hero/hero'
+import Shortener from '../components/shortener/shortener'
 
 const IndexPage = ({ data }) => {
   return (
@@ -11,6 +12,7 @@ const IndexPage = ({ data }) => {
       <Seo title='Shortly' />
       <h1 className='visually-hidden'>{data.indexYaml.title}</h1>
       <Hero {...data.indexYaml.sections.hero} />
+      <Shortener />
     </Layout>
   )
 }

@@ -26,7 +26,7 @@ const Hero = ({
           links are performing.
         </p>
         <Button>
-          <Link>{text}</Link>
+          <Link to={to}>{text}</Link>
         </Button>
       </div>
     </section>
