@@ -5,6 +5,36 @@
 }
 
 .shortener__form {
+  padding: 1.5rem;
 
+
+  background-image: url(../../images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
   background-color: var(--bgDark);
+  border-radius: 10px;
+}
+
+.shortener__form > input[type=text] {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+
+  font-weight: 500;
+  line-height: 3;
+  letter-spacing: 0.01em;
+
+  border: none;
+  border-radius: 5px;
+}
+
+.shortener__form > button {
+  display: block;
+  width: 100%;
+  padding: 0 1rem;
+
+  font-weight: 500;
+  line-height: 3;
+
+  border: none;
 }

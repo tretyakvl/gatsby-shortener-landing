@@ -14,7 +14,7 @@ const Shortener = () => {
         className={style.shortener__form}
         onSubmit={handleSumbit}
       >
-        <input type='text' id='shortener-email' />
+        <input type='text' id='shortener-email' placeholder='Shorten a link here...' />
         <button type='submit'>Shorten it</button>
       </form>
     </section>
