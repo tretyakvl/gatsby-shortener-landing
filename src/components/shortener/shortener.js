@@ -1,7 +1,6 @@
 /**
  * TODO:
  *
- * Handle errors, 404 and 500
  * Remove commented promise fetch
  */
 
@@ -9,16 +8,28 @@ import React, { useState } from 'react'
 
 import style from './shortener.module.css'
 
+const REL_INK = 'https://rel.ink'
+
 const Shortener = () => {
   const [urlToShorten, setUrlToShorten] = useState('')
+  const [shortenedLinks, setShortenedLinks] = useState([])
 
   return (
     <section className={style.shortener}>
       <form
         className={style.shortener__form}
-        onSubmit={event => {
+        onSubmit={async event => {
           event.preventDefault()
-          configuredFetch({ urlToShorten })
+          const result = await configuredFetch({ urlToShorten })
+
+          if (result) {
+            const { url, hashid } = result
+
+            setShortenedLinks(shortenedLinks => [
+              ...shortenedLinks,
+              { url, hashid }
+            ])
+          }
         }}
       >
         <input
@@ -30,6 +41,14 @@ const Shortener = () => {
         />
         <button type='submit'>Shorten it</button>
       </form>
+      <ul>
+        {shortenedLinks.map(({ url, hashid }, i) => (
+          <li key={hashid + i}>
+            <span>{url}</span>
+            <span>{`${REL_INK}/${hashid}`}</span>
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }
@@ -41,7 +60,7 @@ async function configuredFetch (payload) {
     'Content-Type': 'application/json'
   })
 
-  const request = new Request('https://rel.ink/api/links/', {
+  const request = new Request(`${REL_INK}/api/links/`, {
     method: 'POST',
     mode: 'cors',
     headers,
