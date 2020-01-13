@@ -17,7 +17,7 @@ const Shortener = () => {
         className={style.shortener__form}
         onSubmit={event => {
           event.preventDefault()
-          console.log(urlToShorten)
+          fetchShortenedUrl(urlToShorten)
         }}
       >
         <input
@@ -36,9 +36,14 @@ const Shortener = () => {
 export default Shortener
 
 async function fetchShortenedUrl (url) {
-  fetch('https://rel.ink/api/links/', {
+  const data = await fetch('https://rel.ink/api/links/', {
     method: 'POST',
     mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
     body: JSON.stringify({ url })
-  }).then(response => console.log(response))
+  }).then(response => response.json())
+
+  return data
 }
