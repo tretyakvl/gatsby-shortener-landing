@@ -2,6 +2,7 @@
  * TODO:
  *
  * Handle errors, 404 and 500
+ * Remove commented promise fetch
  */
 
 import React, { useState } from 'react'
@@ -17,7 +18,7 @@ const Shortener = () => {
         className={style.shortener__form}
         onSubmit={event => {
           event.preventDefault()
-          fetchShortenedUrl(urlToShorten)
+          configuredFetch({ urlToShorten })
         }}
       >
         <input
@@ -35,15 +36,24 @@ const Shortener = () => {
 
 export default Shortener
 
-async function fetchShortenedUrl (url) {
-  const data = await fetch('https://rel.ink/api/links/', {
+async function configuredFetch (payload) {
+  const headers = new Headers({
+    'Content-Type': 'application/json'
+  })
+
+  const request = new Request('https://rel.ink/api/links/', {
     method: 'POST',
     mode: 'cors',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ url })
-  }).then(response => response.json())
+    headers,
+    body: JSON.stringify(payload)
+  })
 
-  return data
+  try {
+    const response = await fetch(request)
+    if (!response.ok) throw new Error(response.statusText)
+    return await response.json()
+  } catch (error) {
+    console.log(`Some error: ${error}`)
+    return null
+  }
 }
