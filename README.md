@@ -4,8 +4,10 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  URL shortening API landing page
 </h1>
+
+Responsive langing page integrated with [rel.ink](https://rel.ink/) API. The project built with [Gatsby](https://www.gatsbyjs.org/).
 
 ## Features
 
