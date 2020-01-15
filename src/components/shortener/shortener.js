@@ -41,13 +41,18 @@ const Shortener = () => {
         />
         <button type='submit'>Shorten it</button>
       </form>
-      <ul>
-        {shortenedLinks.map(({ url, hashid }, i) => (
+      <ul className={style.shortener__list}>
+        <li className={style.shortener__item}>
+          <span>https://www.frontendmentor.io</span>
+          <a href='#'>https://rel.ink/k4lKyk</a>
+          <button>Copy</button>
+        </li>
+        {/* {shortenedLinks.map(({ url, hashid }, i) => (
           <li key={hashid + i}>
             <span>{url}</span>
             <span>{`${REL_INK}/${hashid}`}</span>
           </li>
-        ))}
+        ))} */}
       </ul>
     </section>
   )

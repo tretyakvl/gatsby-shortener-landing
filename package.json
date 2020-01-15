@@ -47,6 +47,9 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "standard": {
-    "env": ["jest", "browser"]
+    "env": [
+      "jest",
+      "browser"
+    ]
   }
 }
