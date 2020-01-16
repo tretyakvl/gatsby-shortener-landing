@@ -30,15 +30,15 @@
 .navDesktop__links a {
   display: inline-block;
 
-  color: var(--linkColor);
+  color: var(--gray-500);
   text-decoration: none;
   text-transform: capitalize;
 
-  transition: color 100ms linear;
+  transition: var(--hover);
 }
 
 .navDesktop__links a:hover {
-  color: var(--linkHover);
+  color: var(--gray-700);
 }
 
 .navDesktop__links + .navDesktop__links {

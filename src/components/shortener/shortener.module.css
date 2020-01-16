@@ -18,7 +18,7 @@
   border-radius: 10px;
 }
 
-.shortener__form > input[type=text] {
+.shortener__form > input[type="text"] {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0 1rem;
@@ -32,7 +32,7 @@
 }
 
 .shortener__form > input::placeholder {
-  color: var(--textColor);
+  color: var(--gray-400);
 }
 
 .shortener__form > button {
@@ -73,7 +73,7 @@
 .shortener__item > span {
   padding: 0.8rem 1rem 0.8rem;
 
-  color: var(--linkHover);
+  color: var(--gray-700);
 
   border-bottom: 1px solid hsl(0, 0%, 90%);
 }
@@ -94,7 +94,7 @@
   background-color: hsl(180, 66%, 49%);
 }
 
-@media(min-width: 52rem) {
+@media (min-width: 52rem) {
   .shortener__form {
     display: flex;
     flex-direction: row;
@@ -106,7 +106,7 @@
     background-image: url(../../images/bg-shorten-desktop.svg);
   }
 
-  .shortener__form > input[type=text] {
+  .shortener__form > input[type="text"] {
     flex-grow: 1;
 
     width: auto;

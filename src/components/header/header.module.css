@@ -12,7 +12,7 @@
   padding: 0 1.5rem;
 }
 
-@media(min-width: 41.25rem) {
+@media (min-width: 41.25rem) {
   .header {
     height: 9rem;
   }

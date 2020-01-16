@@ -7,7 +7,7 @@ const Path = props => (
   <motion.path
     fill='transparent'
     strokeWidth='3'
-    stroke='var(--textColor500)'
+    stroke='var(--gray-500)'
     initial='closed'
     {...props}
   />

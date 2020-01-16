@@ -6,7 +6,7 @@
   line-height: 2.7;
   text-transform: capitalize;
 
-  background-color: var(--buttonColor);
+  background-color: var(--primary-400);
   border-radius: 40px;
 }
 

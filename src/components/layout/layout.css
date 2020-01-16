@@ -1,45 +1,15 @@
-
-/* ### Primary
-
-- Cyan: hsl(180, 66%, 49%)
-- Dark Violet: hsl(257, 27%, 26%)
-
-- primary400 hsl(180, 66%, 49%)
-- primary700 hsl(257, 27%, 26%)
-
-### Secondary
-
-- dectructive400 hsl(0, 87%, 67%)
-
-### Neutral
-
-- Gray: hsl(0, 0%, 75%)
-- Grayish Violet: hsl(257, 7%, 63%)
-- Very Dark Blue: hsl(255, 11%, 22%)
-- Very Dark Violet: hsl(260, 8%, 14%) 
-  gray400 hsl(0, 0%, 75%)
-  gray500 hsl(257, 7%, 63%)
-  gray600 hsl(255, 11%, 22%)
-  gray700 hsl(260, 8%, 14%) 
-
-*/
-
-/*
-  greys - text, bg, panels, form controls: darkest dark grey light lightest or 8 - 10
-
-  primary colors - primary action, active navigation 5 - 10
-
-  accent erros, warning, positive action etc 7
-*/
 :root {
-  --textColor: hsl(0, 0%, 75%);
-  --textColor500: hsl(257, 7%, 63%);
+  --primary-400: hsl(180, 66%, 49%);
+  --primary-700: hsl(257, 27%, 26%);
 
-  --linkColor: hsl(257, 7%, 63%);
-  --linkHover: hsl(260, 8%, 14%);
-  --headerColor: hsl(257, 27%, 26%);
-  --buttonColor: hsl(180, 66%, 49%);
-  --bgDark: hsl(257, 27%, 26%);
+  --gray-400: hsl(0, 0%, 75%);
+  --gray-500: hsl(257, 7%, 63%);
+  --gray-600: hsl(255, 11%, 22%);
+  --gray-700: hsl(260, 8%, 14%);
+
+  --red-400: hsl(0, 87%, 67%);
+
+  --hover: 100ms color linear;
 }
 
 body {
@@ -49,10 +19,10 @@ body {
   min-width: 22.5rem;
   margin: 0 auto;
 
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
   line-height: 1.5;
-  color: var(--textColor);
+  color: var(--gray-400);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -79,12 +49,17 @@ img {
   white-space: nowrap;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--headerColor);
+  color: var(--primary-700);
 }
 
 p {
