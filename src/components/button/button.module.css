@@ -16,13 +16,17 @@
   border-radius: 40px;
 
   scale: 1;
-  transition: var(--transition-opacity);
+  transition: var(--transition-opacity), var(--transition-scale);
 }
 
 .button:hover {
   opacity: 0.5;
 
   cursor: pointer;
+}
+
+.button:active {
+  scale: 0.8;
 }
 
 .square {

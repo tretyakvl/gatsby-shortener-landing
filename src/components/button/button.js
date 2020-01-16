@@ -1,13 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { motion } from 'framer-motion'
 
 import style from './button.module.css'
-
-const tapAnimation = {
-  initial: { scale: 1 },
-  whileTap: { scale: 0.9 }
-}
 
 const Button = props => {
   const { types = '', to, href, ...rest } = props
@@ -19,37 +13,29 @@ const Button = props => {
 
   if (to) {
     return (
-      <motion.span
-        style={{
-          display: 'inline-block'
-        }}
-        {...tapAnimation}
-      >
-        <Link className={className} to={to} {...rest}>
-          {props.children}
-        </Link>
-      </motion.span>
+      <Link className={className} to={to} {...rest}>
+        {props.children}
+      </Link>
     )
   }
 
   if (href) {
     return (
-      <motion.a
+      <a
         className={className}
         href={href}
         rel='noopener noreferrer'
         {...rest}
-        {...tapAnimation}
       >
         {props.children}
-      </motion.a>
+      </a>
     )
   }
 
   return (
-    <motion.button className={className} {...rest} {...tapAnimation}>
+    <button className={className} {...rest}>
       {props.children}
-    </motion.button>
+    </button>
   )
 }
 
