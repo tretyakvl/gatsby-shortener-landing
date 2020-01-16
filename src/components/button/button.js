@@ -4,20 +4,17 @@ import { Link } from 'gatsby'
 import style from './button.module.css'
 
 const Button = props => {
-  const { type, size, active, to, href, ...rest } = props
-  let className = style.button + ' .button'
-
-  if (type === 'square') {
-    className = className + ` ${style.buttonSquare}`
+  const { types, to, href, ...rest } = props
+  const typesClasses = {
+    square: style.buttonSquare,
+    narrow: style.buttonNarrow,
+    active: style.buttonActive
   }
+  const className = types.split(' ').reduce((classes, type) => {
+    const currentClass = typesClasses[type]
 
-  if (size === 'narrow') {
-    className = className + ` ${style.buttonNarrow}`
-  }
-
-  if (active) {
-    className = className + ` ${style.buttonActive}`
-  }
+    return currentClass ? classes + ` ${currentClass}` : classes
+  }, `${style.button} .button`)
 
   if (to) {
     return (
