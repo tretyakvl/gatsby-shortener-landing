@@ -9,7 +9,9 @@
 
   --red-400: hsl(0, 87%, 67%);
 
-  --hover: 100ms color linear;
+  --hover: 100ms linear;
+  --transition-color: color var(--hover);
+  --transition-opacity: opacity var(--hover);
 }
 
 body {

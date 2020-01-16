@@ -7,13 +7,17 @@ import Button from '../components/button/button'
 const SecondPage = () => (
   <Layout>
     <Seo title='Page two' />
-    <Button to='/'>Gatsby</Button>
-    <Button href='google.com'>Normal a</Button>
-    <Button>Button</Button>
-    <Button type='square'>Button</Button>
-    <Button type='square' size='narrow'>Button</Button>
-    <Button size='narrow'>Button</Button>
-    <Button size='narrow' active>Button</Button>
+
+    <div style={{
+      paddingLeft: '200px'
+    }}
+    >
+      <Button to='/'>Get started</Button>
+      <Button types='thin'>Sign Up</Button>
+      <Button types='square'>Shorten It!</Button>
+      <Button types='square thin active'>Copied!</Button>
+      <Button types='square thin'>Copy</Button>
+    </div>
   </Layout>
 )
 
