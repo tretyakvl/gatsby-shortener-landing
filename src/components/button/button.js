@@ -9,7 +9,7 @@ const Button = props => {
     const currentClass = style[type]
 
     return currentClass ? classes + ` ${currentClass}` : classes
-  }, `${style.button} button-module`)
+  }, `button-module ${style.button}`)
 
   if (to) {
     return (

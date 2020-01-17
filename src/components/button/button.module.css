@@ -10,6 +10,7 @@
   text-align: center;
   text-transform: capitalize;
   text-decoration: none;
+  white-space: nowrap;
 
   background-color: var(--primary-400);
   border: none;
@@ -33,7 +34,7 @@
   border-radius: 5px;
 }
 
-.thin {
+.thin400 {
   min-width: 6.5rem;
   padding: 0 1.3rem;
 
@@ -41,6 +42,12 @@
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 2.5;
+}
+
+.thin500 {
+  font-size: 1.2rem;
+  line-height: 2.5;
+  letter-spacing: -0.03em;
 }
 
 .active {

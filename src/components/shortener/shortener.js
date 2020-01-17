@@ -1,10 +1,5 @@
-/**
- * TODO:
- *
- * Remove commented promise fetch
- */
-
 import React, { useState } from 'react'
+import Button from '../button/button'
 
 import style from './shortener.module.css'
 
@@ -39,13 +34,18 @@ const Shortener = () => {
           value={urlToShorten}
           onChange={event => setUrlToShorten(event.target.value)}
         />
-        <button type='submit'>Shorten it</button>
+        <Button types='square thin500'>Shorten it!</Button>
       </form>
       <ul className={style.shortener__list}>
         <li className={style.shortener__item}>
           <span>https://www.frontendmentor.io</span>
           <a href='#'>https://rel.ink/k4lKyk</a>
-          <button>Copy</button>
+          <Button types='square thin400'>copy</Button>
+        </li>
+        <li className={style.shortener__item}>
+          <span>https://www.frontendmentor.io</span>
+          <a href='#'>https://rel.ink/k4lKyk</a>
+          <Button types='square thin400'>copy</Button>
         </li>
         {/* {shortenedLinks.map(({ url, hashid }, i) => (
           <li key={hashid + i}>
