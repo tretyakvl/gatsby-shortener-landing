@@ -5,7 +5,7 @@
   margin: 0 auto 1.56rem;
   padding: 1.5rem;
 
-  background-image: url(../../images/bg-shorten-mobile.svg);
+  background-image: url(../../../images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right;
   background-color: var(--primary-700);
@@ -55,7 +55,7 @@
   .shortener__form {
     padding: 3.3rem 4.1rem;
 
-    background-image: url(../../images/bg-shorten-desktop.svg);
+    background-image: url(../../../images/bg-shorten-desktop.svg);
   }
 
   .shortener__form > input[type="text"] {

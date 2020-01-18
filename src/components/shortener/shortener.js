@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import ShortenerForm from './shortener-form/shortener-form'
+import ShortenerList from './shoretener-list/shortener-list'
+
+import { REL_INK } from '../../constants'
 
 import style from './shortener.module.css'
-
-const REL_INK = 'https://rel.ink'
 
 const Shortener = () => {
   const [urlToShorten, setUrlToShorten] = useState('')
   const [shortenedLinks, setShortenedLinks] = useState([])
+
   const handleSumbit = async event => {
     event.preventDefault()
     const result = await configuredFetch({ url: urlToShorten })
@@ -15,16 +17,22 @@ const Shortener = () => {
     if (result) {
       const { url, hashid } = result
 
-      setShortenedLinks(shortenedLinks => [
-        ...shortenedLinks,
-        { url, hashid }
-      ])
+      setShortenedLinks(shortenedLinks => [...shortenedLinks, { url, hashid }])
     }
   }
+  const handleChange = event => setUrlToShorten(event.target.value)
 
   return (
     <section className={style.shortener}>
-      <ShortenerForm onSubmit={handleSumbit} />
+      <ShortenerForm
+        onSubmit={handleSumbit}
+        onChange={handleChange}
+        value={urlToShorten}
+      />
+      <ShortenerList
+        shortenedLinks={shortenedLinks}
+        serviceUrl={REL_INK}
+      />
     </section>
   )
 }

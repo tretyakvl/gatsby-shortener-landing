@@ -3,7 +3,7 @@ import Button from '../../button/button'
 
 import style from './shortener-form.module.css'
 
-const ShortenerForm = ({ onSubmit }) => {
+const ShortenerForm = ({ onSubmit, onChange, value }) => {
   return (
     <form
       className={style.shortener__form}
@@ -13,8 +13,8 @@ const ShortenerForm = ({ onSubmit }) => {
         type='text'
         id='shortener-url'
         placeholder='Shorten a link here...'
-        value={urlToShorten}
-        onChange={event => setUrlToShorten(event.target.value)}
+        value={value}
+        onChange={onChange}
       />
       <Button types='square thin500'>Shorten it!</Button>
     </form>
