@@ -6,6 +6,7 @@ import Seo from '../components/seo'
 import Hero from '../components/hero/hero'
 import Shortener from '../components/shortener/shortener'
 import Features from '../components/features/features'
+import Start from '../components/start/start'
 
 const IndexPage = ({ data }) => {
   return (
@@ -15,6 +16,7 @@ const IndexPage = ({ data }) => {
       <Hero {...data.indexYaml.sections.hero} />
       <Shortener />
       <Features {...data.indexYaml.sections.features} />
+      <Start {...data.indexYaml.sections.start} />
     </Layout>
   )
 }
