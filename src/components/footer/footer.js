@@ -7,21 +7,23 @@ import style from './footer.module.css'
 const Footer = ({ groups, logo, social }) => {
   return (
     <footer className={style.footer}>
-      <img src={logo.publicURL} alt='Shortly logo' />
-      <nav>
-        {groups.map(({ group }, i) => (
-          <section key={i}>
-            <h3>{group.title}</h3>
-            <ul>
-              {group.links.map(([title, to], i) => (
-                <li key={i}>
-                  <Link to={to}>{title}</Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </nav>
+      <div className={style.footer__container}>
+        <img src={logo.publicURL} alt='Shortly logo' />
+        <nav>
+          {groups.map(({ group }, i) => (
+            <section key={i}>
+              <h4>{group.title}</h4>
+              <ul>
+                {group.links.map(([title, to], i) => (
+                  <li key={i}>
+                    <Link to={to}>{title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </nav>
+      </div>
     </footer>
   )
 }
