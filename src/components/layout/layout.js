@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Header from '../header/header'
+import Footer from '../footer/footer'
 
 import 'normalize.css'
 import './layout.css'
@@ -13,9 +14,7 @@ const Layout = ({ children }) => {
       <main>
         {children}
       </main>
-      <footer>
-      footer
-      </footer>
+      <Footer />
     </>
   )
 }

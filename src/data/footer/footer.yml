@@ -1,20 +1,27 @@
 logo: ../../images/logo.svg
-links: 
-  - features: 
-      - Link Shortening: '#'
-      - Branded Links: '#'
-      - Analytics: '#'
-  - resources: 
-      - Blog: '#'
-      - Developers: '#'
-      - Support: '#'
-  - company: 
-      - About: '#'
-      - Our Team: '#'
-      - Careers: '#'
-      - Contact: '#'
+groups: 
+  - group:
+      title: 'Features'
+      links: 
+        - ['Link Shortening', '#']
+        - ['Branded Links', '#']
+        - ['Analytics', '#']
+  - group:
+      title: 'Resources'
+      links: 
+        - ['Blog', '#']
+        - ['Developers', '#']
+        - ['Support', '#']
+  - group:
+      title: 'Company'
+      links: 
+        - ['About', '#']
+        - ['Our Team', '#']
+        - ['Careers', '#']
+        - ['Contact', '#']
 social:
-  - facebook: '#'
-  - twitter: '#'
-  - pinterest: '#'
-  - instagram: '#'
+    links:
+        - ['facebook', '#']
+        - ['twitter', '#']
+        - ['pinterest', '#']
+        - ['instagram', '#']
