@@ -20,6 +20,14 @@ module.exports = {
         path: `${__dirname}/src/data`
       }
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-transformer-yaml'
   ]

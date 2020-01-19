@@ -3,14 +3,14 @@ import React from 'react'
 import Navigation from '../navigation/navigation'
 
 import style from './header.module.css'
-import logo from '../../images/logo.svg'
+import Logo from '../logo/logo'
 
 const Header = () => {
   return (
     <header
       className={style.header}
     >
-      <img src={logo} alt='Shortly logo' />
+      <Logo />
       <Navigation />
     </header>
   )

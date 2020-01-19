@@ -2,13 +2,15 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 // import PropTypes from 'prop-types'
 
+import Logo from '../logo/logo'
+
 import style from './footer.module.css'
 
 const Footer = ({ groups, logo, social }) => {
   return (
     <footer className={style.footer}>
       <div className={style.footer__container}>
-        <img src={logo.publicURL} alt='Shortly logo' />
+        <Logo type='light' />
         <nav>
           {groups.map(({ group }, i) => (
             <section key={i}>
