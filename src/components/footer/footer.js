@@ -12,7 +12,7 @@ const Footer = ({ groups, social }) => {
     <footer className={style.footer}>
       <div className={style.footer__container}>
         <Logo type='light' />
-        <nav>
+        <nav className={style.footer__navigation}>
           {groups.map(({ group }, i) => (
             <section key={i}>
               <h4>{group.title}</h4>
@@ -25,8 +25,8 @@ const Footer = ({ groups, social }) => {
               </ul>
             </section>
           ))}
+          <Socials links={social.links} />
         </nav>
-        <Socials links={social.links} />
       </div>
     </footer>
   )
