@@ -9,7 +9,7 @@ sections:
       text: 'Get started'
       to: '#'
   features:
-    tite: 'Advanced Statistics' desc: 'Track how your links are performing
+    title: 'Advanced Statistics' desc: 'Track how your links are performing
     across the web with our advanced statistics dashboard.'
     list:
       - item:
