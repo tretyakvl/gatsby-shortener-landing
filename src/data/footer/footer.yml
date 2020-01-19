@@ -1,0 +1,20 @@
+logo: ../../images/logo.svg
+links: 
+  - features: 
+      - Link Shortening: '#'
+      - Branded Links: '#'
+      - Analytics: '#'
+  - resources: 
+      - Blog: '#'
+      - Developers: '#'
+      - Support: '#'
+  - company: 
+      - About: '#'
+      - Our Team: '#'
+      - Careers: '#'
+      - Contact: '#'
+social:
+  - facebook: '#'
+  - twitter: '#'
+  - pinterest: '#'
+  - instagram: '#'
