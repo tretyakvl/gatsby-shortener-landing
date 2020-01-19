@@ -3,10 +3,11 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 // import PropTypes from 'prop-types'
 
 import Logo from '../logo/logo'
+import Socials from '../socials/socials'
 
 import style from './footer.module.css'
 
-const Footer = ({ groups, logo, social }) => {
+const Footer = ({ groups, social }) => {
   return (
     <footer className={style.footer}>
       <div className={style.footer__container}>
@@ -25,6 +26,7 @@ const Footer = ({ groups, logo, social }) => {
             </section>
           ))}
         </nav>
+        <Socials links={social.links} />
       </div>
     </footer>
   )
@@ -40,9 +42,6 @@ export default props => (
               links
               title
             }
-          }
-          logo {
-            publicURL
           }
           social {
             links

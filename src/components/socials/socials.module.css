@@ -1,0 +1,22 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.socials a {
+  padding: 0.5rem;
+}
+
+.socials a + a {
+  margin-left: 0.5rem;
+}
+
+.socials svg {
+  display: block;
+}
