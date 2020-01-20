@@ -1,5 +1,8 @@
 .shortener {
-  background-color: hsl(230, 25%, 95%);
+  background: linear-gradient(
+    var(--gray-0) 5.3rem,
+    var(--gray-300) 5.3rem
+  );
 }
 
 .shortener__container {

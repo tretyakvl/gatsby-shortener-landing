@@ -6,6 +6,14 @@ import { REL_INK } from '../../constants'
 
 import style from './shortener.module.css'
 
+function * keyMaker () {
+  let index = 0
+
+  while (true) { yield index++ }
+}
+
+const keys = keyMaker()
+
 const Shortener = () => {
   const [urlToShorten, setUrlToShorten] = useState('')
   const [shortenedLinks, setShortenedLinks] = useState([])
@@ -23,8 +31,16 @@ const Shortener = () => {
 
     if (result) {
       const { url, hashid } = result
+      const key = keys.next().value
 
-      setShortenedLinks(shortenedLinks => [...shortenedLinks, { url, hashid }])
+      setShortenedLinks(shortenedLinks => {
+        const copy = [...shortenedLinks]
+
+        if (copy.length > 2) copy.shift()
+        copy.push({ url, hashid, key })
+
+        return copy
+      })
     }
   }
   const handleChange = event => setUrlToShorten(event.target.value)
