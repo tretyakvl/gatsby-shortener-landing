@@ -1,7 +1,11 @@
 .shortener {
-  max-width: 72.4rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-
   background-color: hsl(230, 25%, 95%);
+}
+
+.shortener__container {
+  max-width: var(--max-width);
+  margin: var(--margin);
+  padding: var(--padding);
+  padding-top: 0;
+  padding-bottom: 0;
 }

@@ -1,4 +1,10 @@
 :root {
+  /* Section layout */
+  --max-width: 72.5rem;
+  --padding: 1rem 1.5rem;
+  --margin: 0 auto;
+
+  /* Colors */
   --primary-400: hsl(180, 66%, 49%);
   --primary-700: hsl(257, 27%, 26%);
 
@@ -11,6 +17,7 @@
 
   --red-400: hsl(0, 87%, 67%);
 
+  /* Transitions and animations */
   --hover: 100ms linear;
   --transition-color: color var(--hover);
   --transition-opacity: opacity var(--hover);

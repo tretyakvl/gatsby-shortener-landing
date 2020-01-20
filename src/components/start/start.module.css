@@ -1,15 +1,17 @@
-.container {
+.start {
+  text-align: center;
+
   background: url(../../images/bg-boost-mobile.svg) center no-repeat;
   background-size: cover;
   background-color: var(--primary-700);
 }
 
-.start {
-  max-width: 72.5rem;
-  margin: 0 auto;
-  padding: 6.3rem 1.5rem 5.6rem;
-
-  text-align: center;
+.start__container {
+  max-width: var(--max-width);
+  margin: var(--margin);
+  padding: var(--padding);
+  padding-top: 6.3rem;
+  padding-bottom: 5.6rem;
 }
 
 .start h2 {
@@ -22,12 +24,15 @@
 }
 
 @media (min-width: 37.5rem) {
-  .container {
-    background-image: url(../../images/bg-boost-desktop.svg);
+  .start {
+    background: url(../../images/bg-boost-mobile.svg) center no-repeat;
+    background-size: cover;
+    background-color: var(--primary-700);
   }
 
-  .start {
-    padding: 4rem 1.5rem 3.5rem;
+  .start__container {
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
   }
 
   .start h2 {

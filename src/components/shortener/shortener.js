@@ -24,15 +24,17 @@ const Shortener = () => {
 
   return (
     <section className={style.shortener}>
-      <ShortenerForm
-        onSubmit={handleSumbit}
-        onChange={handleChange}
-        value={urlToShorten}
-      />
-      <ShortenerList
-        shortenedLinks={shortenedLinks}
-        serviceUrl={REL_INK}
-      />
+      <div className={style.shortener__container}>
+        <ShortenerForm
+          onSubmit={handleSumbit}
+          onChange={handleChange}
+          value={urlToShorten}
+        />
+        <ShortenerList
+          shortenedLinks={shortenedLinks}
+          serviceUrl={REL_INK}
+        />
+      </div>
     </section>
   )
 }

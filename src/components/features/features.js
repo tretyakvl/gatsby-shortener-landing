@@ -4,8 +4,8 @@ import style from './features.module.css'
 
 const Features = ({ title, desc, list }) => {
   return (
-    <div className={style.container}>
-      <section className={style.features}>
+    <section className={style.features}>
+      <div className={style.features__container}>
         <h2 className='visually-hidden'>Shortly features</h2>
         <div className={style.features__main}>
           <h3>{title}</h3>
@@ -19,8 +19,8 @@ const Features = ({ title, desc, list }) => {
             </li>
           ))}
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
 
