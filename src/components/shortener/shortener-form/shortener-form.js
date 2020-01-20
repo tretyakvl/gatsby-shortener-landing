@@ -3,19 +3,24 @@ import Button from '../../button/button'
 
 import style from './shortener-form.module.css'
 
-const ShortenerForm = ({ onSubmit, onChange, value }) => {
+const ShortenerForm = ({ onSubmit, onChange, value, errorMessage }) => {
+  const errorClass = errorMessage ? style.form__notificatorError : ''
+
   return (
     <form
-      className={style.shortener__form}
+      className={style.form}
       onSubmit={onSubmit}
     >
-      <input
-        type='text'
-        id='shortener-url'
-        placeholder='Shorten a link here...'
-        value={value}
-        onChange={onChange}
-      />
+      <div className={`${style.form__notificator} ${errorClass}`}>
+        <input
+          type='text'
+          id='shortener-url'
+          placeholder='Shorten a link here...'
+          value={value}
+          onChange={onChange}
+        />
+        <span>{errorMessage}</span>
+      </div>
       <Button types='square thin500'>Shorten it!</Button>
     </form>
   )

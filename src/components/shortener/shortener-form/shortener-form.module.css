@@ -1,4 +1,4 @@
-.shortener__form {
+.form {
   display: flex;
   flex-direction: column;
 
@@ -8,13 +8,13 @@
   background-image: url(../../../images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: cover;
   background-color: var(--primary-700);
   border-radius: 10px;
 }
 
-.shortener__form > input[type="text"] {
+.form input[type="text"] {
   width: 100%;
-  margin-bottom: 1rem;
   padding: 0 1rem;
 
   font-weight: 500;
@@ -23,27 +23,65 @@
 
   border: none;
   border-radius: 5px;
-  box-shadow: 0 0 0 3.5px var(--red-400) inset;
+  box-shadow: 0 0 0 4px hsl(0, 87%, 67%, 0) inset;
+
+  transition: box-shadow 100ms linear;
 }
 
-.shortener__form > input::placeholder {
+.form__notificator {
+  position: relative;
+
+  margin-bottom: 1rem;
+}
+
+.form__notificator span {
+  --transition: 400ms ease-out;
+
+  display: block;
+
+  height: 0;
+
+  color: var(--red-400);
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 2;
+
+  opacity: 0;
+  transition: height var(--transition) 100ms,
+    opacity var(--transition) 100ms;
+}
+
+.form__notificator--error input[type="text"] {
+  box-shadow: 0 0 0 4px hsl(0, 87%, 67%, 1) inset;
+}
+
+.form__notificator--error span {
+  height: 1.3rem;
+  opacity: 1;
+}
+
+.form input::placeholder {
   color: var(--gray-400);
 }
 
 @media (min-width: 37.5rem) {
-  .shortener__form {
+  .form {
     flex-direction: row;
   }
 
-  .shortener__form > input[type="text"] {
+  .form__notificator {
     flex-grow: 1;
-
-    width: auto;
     margin-right: 1.5rem;
     margin-bottom: 0;
   }
 
-  .shortener__form :global(.button-module) {
+  .form__notificator span {
+    position: absolute;
+
+    font-size: 1rem;
+  }
+
+  .form :global(.button-module) {
     flex-grow: 1;
 
     max-width: 11.625rem;
@@ -52,13 +90,13 @@
 }
 
 @media (min-width: 52rem) {
-  .shortener__form {
+  .form {
     padding: 3.3rem 4.1rem;
 
     background-image: url(../../../images/bg-shorten-desktop.svg);
   }
 
-  .shortener__form > input[type="text"] {
+  .form input[type="text"] {
     padding: 0 2rem;
 
     font-size: 1.2rem;
@@ -68,7 +106,7 @@
     border-radius: 10px;
   }
 
-  .shortener__form :global(.button-module) {
+  .form :global(.button-module) {
     font-size: 1.2rem;
     letter-spacing: initial;
 

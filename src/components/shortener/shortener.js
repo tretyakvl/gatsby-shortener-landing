@@ -9,9 +9,16 @@ import style from './shortener.module.css'
 const Shortener = () => {
   const [urlToShorten, setUrlToShorten] = useState('')
   const [shortenedLinks, setShortenedLinks] = useState([])
+  const [errorMessage, setErrorMessage] = useState('')
 
   const handleSumbit = async event => {
     event.preventDefault()
+
+    if (!urlToShorten) {
+      setErrorMessage('Please add a link')
+      return
+    }
+
     const result = await configuredFetch({ url: urlToShorten })
 
     if (result) {
@@ -29,6 +36,7 @@ const Shortener = () => {
           onSubmit={handleSumbit}
           onChange={handleChange}
           value={urlToShorten}
+          errorMessage={errorMessage}
         />
         <ShortenerList
           shortenedLinks={shortenedLinks}
