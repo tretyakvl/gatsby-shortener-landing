@@ -44,6 +44,12 @@
   color: var(--gray-400);
   font-size: 0.9rem;
   text-decoration: none;
+
+  transition: var(--transition-color);
+}
+
+.footer__navigation a:hover {
+  color: var(--primary-400);
 }
 
 .footer__navigation li + li {

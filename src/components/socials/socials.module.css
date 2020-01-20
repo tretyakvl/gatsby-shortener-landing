@@ -17,6 +17,14 @@
   margin-left: 0.5rem;
 }
 
+.socials a path {
+  transition: var(--transition-fill);
+}
+
+.socials a:hover path {
+  fill: var(--primary-400);
+}
+
 .socials svg {
   display: block;
 }
