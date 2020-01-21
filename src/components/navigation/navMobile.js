@@ -1,22 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 
 import Hamburger from '../hamburger/hamburger.js'
 
 import style from './navMobile.module.css'
 
-const LinkItem = ({ text, to }) => (
-  <motion.li
-    whileTap={{
-      scale: 0.8
-    }}
-  >
-    <Link to={to}>{text}</Link>
-  </motion.li>
-)
-
-const NavigationMobile = ({ navigation }) => {
+const NavigationMobile = ({ children }) => {
   const [isOpen, setOpen] = useState(false)
 
   return (
@@ -37,16 +26,7 @@ const NavigationMobile = ({ navigation }) => {
         }}
         animate={isOpen ? 'open' : 'closed'}
       >
-        <ul className={style.navMobile__links}>
-          {navigation.primary.map(([text, to]) => (
-            <LinkItem to={to} text={text} key={text} />
-          ))}
-        </ul>
-        <ul className={style.navMobile__links}>
-          {navigation.login.map(([text, to]) => (
-            <LinkItem to={to} text={text} key={text} />
-          ))}
-        </ul>
+        {children}
       </motion.div>
     </nav>
   )

@@ -30,27 +30,28 @@
   padding-top: 1.5rem;
 }
 
-.navMobile__links {
+.navMobile__dropdown ul {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.navMobile__links a {
+.navMobile__dropdown li + li {
+  margin-top: 1rem;
+}
+
+.navMobile__dropdown a {
   display: inline-block;
 
+  padding: 0 0.5rem;
+
   color: inherit;
+  line-height: 2.3;
   text-decoration: none;
   text-transform: capitalize;
 }
 
-.navMobile__links > * + * {
-  margin-top: 1rem;
-}
-
-.navMobile__links a {
-  padding: 0 0.5rem;
-
-  line-height: 2.3;
+.navMobile__dropdown :global(.button-module) {
+  width: 100%;
 }
