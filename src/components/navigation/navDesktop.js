@@ -3,21 +3,24 @@ import { Link } from 'gatsby'
 
 import style from './navDesktop.module.css'
 
-const LinkItem = ({ to }) => (
+const LinkItem = ({ text, to }) => (
   <li>
-    <Link to={`/${to}`}>{to}</Link>
+    <Link to={to}>{text}</Link>
   </li>
 )
 
-const navDesktop = ({ fields }) => {
+const navDesktop = ({ navigation }) => {
   return (
     <nav className={style.navDesktop}>
       <ul className={style.navDesktop__links}>
-        {fields.map(field => <LinkItem to={field} key={field} />)}
+        {navigation.primary.map(([text, to]) => (
+          <LinkItem to={to} text={text} key={text} />
+        ))}
       </ul>
       <ul className={style.navDesktop__links}>
-        <li><a href=''>Login</a></li>
-        <li><a href=''>Sing Up</a></li>
+        {navigation.login.map(([text, to]) => (
+          <LinkItem to={to} text={text} key={text} />
+        ))}
       </ul>
     </nav>
   )

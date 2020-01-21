@@ -4,14 +4,13 @@ import { useMediaQuery } from 'react-responsive'
 import NavMobile from './navMobile'
 import NavDesktop from './navDesktop'
 
-const Navigation = () => {
+const Navigation = ({ navigation }) => {
   const isWide = useMediaQuery({
     minWidth: '41.25rem'
   })
-  const fields = ['features', 'pricing', 'resources']
 
-  if (isWide) return <NavDesktop fields={fields} />
-  return <NavMobile fields={fields} />
+  if (isWide) return <NavDesktop navigation={navigation} />
+  return <NavMobile navigation={navigation} />
 }
 
 export default Navigation

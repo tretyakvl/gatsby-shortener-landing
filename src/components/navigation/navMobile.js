@@ -6,17 +6,17 @@ import Hamburger from '../hamburger/hamburger.js'
 
 import style from './navMobile.module.css'
 
-const LinkItem = ({ to }) => (
+const LinkItem = ({ text, to }) => (
   <motion.li
     whileTap={{
       scale: 0.8
     }}
   >
-    <Link to={`/${to}`}>{to}</Link>
+    <Link to={to}>{text}</Link>
   </motion.li>
 )
 
-const NavigationMobile = ({ fields }) => {
+const NavigationMobile = ({ navigation }) => {
   const [isOpen, setOpen] = useState(false)
 
   return (
@@ -38,11 +38,14 @@ const NavigationMobile = ({ fields }) => {
         animate={isOpen ? 'open' : 'closed'}
       >
         <ul className={style.navMobile__links}>
-          {fields.map(field => <LinkItem to={field} key={field} />)}
+          {navigation.primary.map(([text, to]) => (
+            <LinkItem to={to} text={text} key={text} />
+          ))}
         </ul>
         <ul className={style.navMobile__links}>
-          <li><a href=''>Login</a></li>
-          <li><a href=''>Sing Up</a></li>
+          {navigation.login.map(([text, to]) => (
+            <LinkItem to={to} text={text} key={text} />
+          ))}
         </ul>
       </motion.div>
     </nav>

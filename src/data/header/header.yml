@@ -1,0 +1,8 @@
+navigation: 
+  primary:
+    - ['Features', '/features']
+    - ['Pricing', '/pricing']
+    - ['Resources', '/resources']
+  login:
+    - ['Login', '/login']
+    - ['Sing Up', '/sing-up']

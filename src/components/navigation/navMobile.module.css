@@ -16,13 +16,14 @@
   letter-spacing: 0.01em;
   text-align: center;
 
-  background-color: var(--bgDark);
+  background-color: var(--primary-700);
   border-radius: 10px;
 }
 
 .navMobile__dropdown > :first-child {
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid hsla(0, 100%, 100%, 0.2);
+  border-bottom: 2px solid
+    hsla(0, 100%, 100%, 0.2);
 }
 
 .navMobile__dropdown > :last-child {
