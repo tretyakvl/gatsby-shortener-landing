@@ -50,7 +50,7 @@
   margin: 0 1rem;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 40rem) {
   .shortener__item {
     flex-direction: row;
     align-items: center;
@@ -78,7 +78,7 @@
   }
 }
 
-@media (min-width: 52rem) {
+@media (min-width: 56.25rem) {
   .shortener__item {
     font-size: 1.3rem;
     letter-spacing: -0.016em;

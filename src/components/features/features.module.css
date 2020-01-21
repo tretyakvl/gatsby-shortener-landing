@@ -85,7 +85,8 @@
   width: var(--size);
   height: var(--size);
 
-  background: url(../../images/icon-brand-recognition.svg) center no-repeat;
+  background: url(../../images/icon-brand-recognition.svg)
+    center no-repeat;
   background-color: var(--primary-700);
   border-radius: 50%;
 }
@@ -114,7 +115,7 @@
   letter-spacing: -0.05em;
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 56.25rem) {
   .features {
     padding-top: 6rem;
     padding-bottom: 7.5rem;

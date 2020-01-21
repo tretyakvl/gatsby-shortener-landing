@@ -8,7 +8,7 @@ import NavDesktop from './navDesktop'
 
 const Navigation = ({ navigation }) => {
   const isWide = useMediaQuery({
-    minWidth: '41.25rem'
+    minWidth: '40rem'
   })
 
   const NavFields = () => (

@@ -64,7 +64,7 @@
   color: var(--gray-400);
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 40rem) {
   .form {
     flex-direction: row;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-@media (min-width: 52rem) {
+@media (min-width: 56.25rem) {
   .form {
     padding: 3.3rem 4.1rem;
 

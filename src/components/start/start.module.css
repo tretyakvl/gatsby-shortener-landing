@@ -1,7 +1,8 @@
 .start {
   text-align: center;
 
-  background: url(../../images/bg-boost-mobile.svg) center no-repeat;
+  background: url(../../images/bg-boost-mobile.svg)
+    center no-repeat;
   background-size: cover;
   background-color: var(--primary-700);
 }
@@ -23,9 +24,10 @@
   letter-spacing: -0.01em;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 56.25rem) {
   .start {
-    background: url(../../images/bg-boost-mobile.svg) center no-repeat;
+    background: url(../../images/bg-boost-mobile.svg)
+      center no-repeat;
     background-size: cover;
     background-color: var(--primary-700);
   }
