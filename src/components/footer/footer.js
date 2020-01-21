@@ -11,7 +11,7 @@ const Footer = ({ groups, social }) => {
   return (
     <footer className={style.footer}>
       <div className={style.footer__container}>
-        <Logo type='light' />
+        <Link to='/'><Logo type='light' /></Link>
         <nav className={style.footer__navigation}>
           {groups.map(({ group }, i) => (
             <section key={i}>

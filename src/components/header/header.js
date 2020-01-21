@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
 import Navigation from '../navigation/navigation'
 
@@ -11,7 +11,7 @@ const Header = ({ navigation }) => {
     <header
       className={style.header}
     >
-      <Logo />
+      <Link to='/'><Logo /></Link>
       <Navigation navigation={navigation} />
     </header>
   )

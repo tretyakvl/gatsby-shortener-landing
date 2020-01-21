@@ -26,7 +26,7 @@
 
 @media (min-width: 56.25rem) {
   .start {
-    background: url(../../images/bg-boost-mobile.svg)
+    background: url(../../images/bg-boost-desktop.svg)
       center no-repeat;
     background-size: cover;
     background-color: var(--primary-700);
