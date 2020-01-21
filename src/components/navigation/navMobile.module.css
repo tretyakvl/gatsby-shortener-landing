@@ -8,7 +8,7 @@
   right: 1.5rem;
 
   width: 20.4rem;
-  padding: 2rem;
+  padding: 2rem 2rem 2.5rem;
 
   color: hsl(0, 100%, 100%);
   font-size: 1.1rem;
@@ -53,5 +53,9 @@
 }
 
 .navMobile__dropdown :global(.button-module) {
-  width: 100%;
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+
+  font-size: 1.2rem;
+  line-height: 2.5;
 }
