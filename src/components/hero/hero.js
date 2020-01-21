@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Button from '../button/button'
 import illustration from '../../images/illustration-working.svg'
@@ -20,13 +19,12 @@ const Hero = ({
         alt='Illustration of a woman working on a computer'
       />
       <div className={style.hero__container}>
-        <h2 className={style.hero__header}>More than just shorter links</h2>
+        <h2 className={style.hero__header}>{title}</h2>
         <p className={style.hero__text}>
-          Build your brand’s recognition and get detailed insights on how your
-          links are performing.
+          {desc}
         </p>
-        <Button>
-          <Link to={to}>{text}</Link>
+        <Button to={to}>
+          {text}
         </Button>
       </div>
     </section>
