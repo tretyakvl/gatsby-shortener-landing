@@ -1,5 +1,6 @@
 .navMobile {
   position: realtive;
+  z-index: 1;
 }
 
 .navMobile__dropdown {
