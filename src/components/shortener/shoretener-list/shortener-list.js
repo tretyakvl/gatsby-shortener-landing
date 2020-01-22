@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+
 import Button from '../../button/button'
 
 import style from './shortener-list.module.css'
@@ -20,30 +22,49 @@ const motionVariants = {
   }
 }
 
+const Item = ({ url, shortUrl, key }) => {
+  const [isCopied, setIsCopied] = useState(false)
+
+  let activeClass = ''
+  let buttonText = 'copy'
+
+  if (isCopied) {
+    activeClass = 'active'
+    buttonText = 'copied!'
+  }
+
+  return (
+    <motion.li
+      className={style.shortener__item}
+      key={key}
+      variants={motionVariants}
+      initial='hidden'
+      animate='shown'
+      exit='exit'
+      layoutTransition
+    >
+      <span>{url}</span>
+      <a href={shortUrl} target='_blank' rel='noopener noreferrer'>
+        {shortUrl}
+      </a>
+      <CopyToClipboard
+        text={shortUrl}
+        onCopy={() => setIsCopied(isCopied => true)}
+      >
+        <Button types={`square thin400 ${activeClass}`}>{buttonText}</Button>
+      </CopyToClipboard>
+    </motion.li>
+  )
+}
+
 const ShortenerList = ({ shortenedLinks, serviceUrl }) => {
   return (
     <ul className={style.shortener__list}>
       <AnimatePresence>
         {shortenedLinks.map(({ url, hashid, key }) => {
-          const shortenedUrl = `${serviceUrl}/${hashid}`
+          const shortUrl = `${serviceUrl}/${hashid}`
 
-          return (
-            <motion.li
-              className={style.shortener__item}
-              key={key}
-              variants={motionVariants}
-              initial='hidden'
-              animate='shown'
-              exit='exit'
-              layoutTransition
-            >
-              <span>{url}</span>
-              <a href={shortenedUrl} target='_blank' rel='noopener noreferrer'>
-                {shortenedUrl}
-              </a>
-              <Button types='square thin400'>copy</Button>
-            </motion.li>
-          )
+          return <Item url={url} shortUrl={shortUrl} key={key} />
         })}
       </AnimatePresence>
     </ul>
