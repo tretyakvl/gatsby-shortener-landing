@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import usePersistentState from '../../hooks/usePersistentState'
+
 import ShortenerForm from './shortener-form/shortener-form'
 import ShortenerList from './shoretener-list/shortener-list'
+import style from './shortener.module.css'
 
 import { REL_INK } from '../../constants'
-
-import style from './shortener.module.css'
 
 function * keyMaker () {
   let index = 0
@@ -16,7 +17,7 @@ const keys = keyMaker()
 
 const Shortener = () => {
   const [urlToShorten, setUrlToShorten] = useState('')
-  const [shortenedLinks, setShortenedLinks] = useState([])
+  const [shortenedLinks, setShortenedLinks] = usePersistentState('shortenedLinks', [])
   const [errorMessage, setErrorMessage] = useState('')
 
   const handleSumbit = async event => {
