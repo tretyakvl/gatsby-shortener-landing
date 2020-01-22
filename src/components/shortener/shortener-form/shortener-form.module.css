@@ -47,12 +47,17 @@
   line-height: 2;
 
   opacity: 0;
-  transition: height var(--transition) 100ms,
-    opacity var(--transition) 100ms;
+  transition: height var(--transition) 200ms,
+    opacity var(--transition) 200ms;
 }
 
 .form__notificator--error input[type="text"] {
   box-shadow: 0 0 0 4px hsl(0, 87%, 67%, 1) inset;
+}
+
+.form__notificator--error
+  input[type="text"]::placeholder {
+  color: var(--red-400);
 }
 
 .form__notificator--error span {
@@ -62,6 +67,8 @@
 
 .form input::placeholder {
   color: var(--gray-400);
+
+  transition: color 100ms linear;
 }
 
 @media (min-width: 40rem) {
