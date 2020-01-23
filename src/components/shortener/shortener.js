@@ -8,11 +8,16 @@ import style from './shortener.module.css'
 
 const Shortener = () => {
   const [urlToShorten, setUrlToShorten] = useState('')
-  const [shortenedLinks, setShortenedLinks] = usePersistentState('shortenedLinks', [])
+  const [shortenedLinks, setShortenedLinks] = usePersistentState(
+    'shortenedLinks',
+    []
+  )
   const [errorMessage, setErrorMessage] = useState('')
 
   const handleSumbit = async event => {
     event.preventDefault()
+
+    if (shortenedLinks.some(item => item.original === urlToShorten)) return
 
     try {
       const { original, shortened } = await shortenUrl(urlToShorten)
@@ -41,9 +46,7 @@ const Shortener = () => {
           value={urlToShorten}
           errorMessage={errorMessage}
         />
-        <ShortenerList
-          shortenedLinks={shortenedLinks}
-        />
+        <ShortenerList shortenedLinks={shortenedLinks} />
       </div>
     </section>
   )

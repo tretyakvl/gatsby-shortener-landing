@@ -1,10 +1,13 @@
 .shortener {
   --split: 5.3rem;
 
+  margin-bottom: -0.1rem;
+
   background: linear-gradient(
     var(--gray-0) var(--split),
     var(--gray-300) var(--split)
   );
+  background-color: var(--gray-300);
 }
 
 .shortener__container {
