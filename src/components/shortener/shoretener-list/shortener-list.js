@@ -22,7 +22,7 @@ const motionVariants = {
   }
 }
 
-const Item = ({ url, shortUrl, key }) => {
+const Item = ({ original, shortened }) => {
   const [isCopied, setIsCopied] = useState(false)
 
   let activeClass = ''
@@ -36,19 +36,18 @@ const Item = ({ url, shortUrl, key }) => {
   return (
     <motion.li
       className={style.shortener__item}
-      key={key}
       variants={motionVariants}
       initial='hidden'
       animate='shown'
       exit='exit'
       layoutTransition
     >
-      <span>{url}</span>
-      <a href={shortUrl} target='_blank' rel='noopener noreferrer'>
-        {shortUrl}
+      <span>{original}</span>
+      <a href={shortened} target='_blank' rel='noopener noreferrer'>
+        {shortened}
       </a>
       <CopyToClipboard
-        text={shortUrl}
+        text={shortened}
         onCopy={() => setIsCopied(isCopied => true)}
       >
         <Button types={`square thin400 ${activeClass}`}>{buttonText}</Button>
@@ -57,14 +56,12 @@ const Item = ({ url, shortUrl, key }) => {
   )
 }
 
-const ShortenerList = ({ shortenedLinks, serviceUrl }) => {
+const ShortenerList = ({ shortenedLinks }) => {
   return (
     <ul className={style.shortener__list}>
       <AnimatePresence>
-        {shortenedLinks.map(({ url, hashid, key }) => {
-          const shortUrl = `${serviceUrl}/${hashid}`
-
-          return <Item url={url} shortUrl={shortUrl} key={key} />
+        {shortenedLinks.map(({ original, shortened }, i) => {
+          return <Item original={original} shortened={shortened} key={i} />
         })}
       </AnimatePresence>
     </ul>

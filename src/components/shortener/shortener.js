@@ -1,19 +1,10 @@
 import React, { useState } from 'react'
 import usePersistentState from '../../hooks/usePersistentState'
+import shortenUrl from '../../helpers/shortenUrl'
 
 import ShortenerForm from './shortener-form/shortener-form'
 import ShortenerList from './shoretener-list/shortener-list'
 import style from './shortener.module.css'
-
-import { REL_INK } from '../../constants'
-
-function * keyMaker () {
-  let index = 0
-
-  while (true) { yield index++ }
-}
-
-const keys = keyMaker()
 
 const Shortener = () => {
   const [urlToShorten, setUrlToShorten] = useState('')
@@ -23,25 +14,20 @@ const Shortener = () => {
   const handleSumbit = async event => {
     event.preventDefault()
 
-    if (!urlToShorten) {
-      setErrorMessage('Please add a link')
-      return
-    }
-
-    const result = await configuredFetch({ url: urlToShorten })
-
-    if (result) {
-      const { url, hashid } = result
-      const key = keys.next().value
+    try {
+      const { original, shortened } = await shortenUrl(urlToShorten)
 
       setShortenedLinks(shortenedLinks => {
         const copy = [...shortenedLinks]
 
         if (copy.length > 2) copy.shift()
-        copy.push({ url, hashid, key })
+        copy.push({ original, shortened })
 
         return copy
       })
+    } catch (error) {
+      console.log(error)
+      setErrorMessage('Something went wrong')
     }
   }
   const handleChange = event => setUrlToShorten(event.target.value)
@@ -57,7 +43,6 @@ const Shortener = () => {
         />
         <ShortenerList
           shortenedLinks={shortenedLinks}
-          serviceUrl={REL_INK}
         />
       </div>
     </section>
@@ -65,25 +50,3 @@ const Shortener = () => {
 }
 
 export default Shortener
-
-async function configuredFetch (payload) {
-  const headers = new Headers({
-    'Content-Type': 'application/json'
-  })
-
-  const request = new Request(`${REL_INK}/api/links/`, {
-    method: 'POST',
-    mode: 'cors',
-    headers,
-    body: JSON.stringify(payload)
-  })
-
-  try {
-    const response = await fetch(request)
-    if (!response.ok) throw new Error(response.statusText)
-    return await response.json()
-  } catch (error) {
-    console.log(`Some error: ${error}`)
-    return null
-  }
-}
