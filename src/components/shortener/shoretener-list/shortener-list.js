@@ -6,23 +6,22 @@ import Button from '../../button/button'
 
 import style from './shortener-list.module.css'
 
-const motionVariants = {
+const variants = {
   hidden: {
     opacity: 0,
-    x: -100,
-    y: -20
+    x: -10
   },
   shown: {
     opacity: 1,
     x: 0,
-    y: 0
-  },
-  exit: {
-    opacity: 0
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.3
+    }
   }
 }
 
-const Item = ({ original, shortened }) => {
+const Item = ({ original, shortened, variants }) => {
   const [isCopied, setIsCopied] = useState(false)
 
   let activeClass = ''
@@ -36,11 +35,8 @@ const Item = ({ original, shortened }) => {
   return (
     <motion.li
       className={style.shortener__item}
-      variants={motionVariants}
-      initial='hidden'
-      animate='shown'
-      exit='exit'
-      layoutTransition
+      variants={variants}
+      exit='hidden'
     >
       <span>{original}</span>
       <a href={shortened} target='_blank' rel='noopener noreferrer'>
@@ -58,13 +54,25 @@ const Item = ({ original, shortened }) => {
 
 const ShortenerList = ({ shortenedLinks }) => {
   return (
-    <ul className={style.shortener__list}>
+    <motion.ul
+      className={style.shortener__list}
+      variants={variants}
+      initial='hidden'
+      animate='shown'
+    >
       <AnimatePresence>
-        {shortenedLinks.map(({ original, shortened }, i) => {
-          return <Item original={original} shortened={shortened} key={i} />
+        {shortenedLinks.map(({ original, shortened }) => {
+          return (
+            <Item
+              original={original}
+              shortened={shortened}
+              variants={variants}
+              key={shortened}
+            />
+          )
         })}
       </AnimatePresence>
-    </ul>
+    </motion.ul>
   )
 }
 
