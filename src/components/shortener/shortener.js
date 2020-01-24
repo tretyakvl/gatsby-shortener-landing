@@ -3,7 +3,7 @@ import usePersistentState from '../../hooks/usePersistentState'
 import shortenUrl from '../../helpers/shortenUrl'
 
 import ShortenerForm from './shortener-form/shortener-form'
-import ShortenerList from './shoretener-list/shortener-list'
+import ShortenerList from './shortener-list/shortener-list'
 import style from './shortener.module.css'
 
 const Shortener = () => {
