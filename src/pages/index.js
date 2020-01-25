@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Seo title='Shortly' />
       <h1 className='visually-hidden'>{data.indexYaml.title}</h1>
-      {/* <Hero {...data.indexYaml.sections.hero} /> */}
+      <Hero {...data.indexYaml.sections.hero} />
       <Shortener />
       <Features {...data.indexYaml.sections.features} />
       <Start {...data.indexYaml.sections.start} />

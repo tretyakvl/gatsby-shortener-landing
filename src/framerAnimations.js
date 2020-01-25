@@ -13,5 +13,6 @@ export const variants = {
 }
 
 export const observerOptions = {
-  threshold: 0.2
+  threshold: 0.5,
+  triggerOnce: true
 }
