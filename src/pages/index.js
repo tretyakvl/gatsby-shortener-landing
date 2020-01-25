@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout/layout'
 import Seo from '../components/seo'
-import AnimationWrapper from '../components/animationWrapper/animationWrapper'
 import Hero from '../components/hero/hero'
 import Shortener from '../components/shortener/shortener'
 import Features from '../components/features/features'
@@ -14,18 +13,10 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Seo title='Shortly' />
       <h1 className='visually-hidden'>{data.indexYaml.title}</h1>
-      <AnimationWrapper>
-        <Hero {...data.indexYaml.sections.hero} />
-      </AnimationWrapper>
-      <AnimationWrapper>
-        <Shortener />
-      </AnimationWrapper>
-      <AnimationWrapper>
-        <Features {...data.indexYaml.sections.features} />
-      </AnimationWrapper>
-      <AnimationWrapper>
-        <Start {...data.indexYaml.sections.start} />
-      </AnimationWrapper>
+      {/* <Hero {...data.indexYaml.sections.hero} /> */}
+      <Shortener />
+      <Features {...data.indexYaml.sections.features} />
+      <Start {...data.indexYaml.sections.start} />
     </Layout>
   )
 }

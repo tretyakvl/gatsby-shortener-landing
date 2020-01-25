@@ -6,21 +6,6 @@ import Button from '../../button/button'
 
 import style from './shortener-list.module.css'
 
-const variants = {
-  hidden: {
-    opacity: 0,
-    x: -10
-  },
-  shown: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.3
-    }
-  }
-}
-
 const Item = ({ original, shortened, variants }) => {
   const [isCopied, setIsCopied] = useState(false)
 
@@ -37,6 +22,7 @@ const Item = ({ original, shortened, variants }) => {
       className={style.shortener__item}
       variants={variants}
       exit='hidden'
+      positionTransition
     >
       <span>{original}</span>
       <a href={shortened} target='_blank' rel='noopener noreferrer'>
@@ -52,14 +38,9 @@ const Item = ({ original, shortened, variants }) => {
   )
 }
 
-const ShortenerList = ({ shortenedLinks }) => {
+const ShortenerList = ({ shortenedLinks, variants }) => {
   return (
-    <motion.ul
-      className={style.shortener__list}
-      variants={variants}
-      initial='hidden'
-      animate='shown'
-    >
+    <ul className={style.shortener__list}>
       <AnimatePresence>
         {shortenedLinks.map(({ original, shortened }) => {
           return (
@@ -72,7 +53,7 @@ const ShortenerList = ({ shortenedLinks }) => {
           )
         })}
       </AnimatePresence>
-    </motion.ul>
+    </ul>
   )
 }
 

@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
+
 import usePersistentState from '../../hooks/usePersistentState'
 import shortenUrl from '../../helpers/shortenUrl'
+import { variants, observerOptions } from '../../framerAnimations'
 
 import ShortenerForm from './shortener-form/shortener-form'
 import ShortenerList from './shortener-list/shortener-list'
 import style from './shortener.module.css'
 
 const Shortener = () => {
+  const [ref, inView] = useInView(observerOptions)
+
   const [urlToShorten, setUrlToShorten] = useState('')
   const [shortenedLinks, setShortenedLinks] = usePersistentState(
     'shortenedLinks',
@@ -39,15 +45,21 @@ const Shortener = () => {
 
   return (
     <section className={style.shortener}>
-      <div className={style.shortener__container}>
+      <motion.div
+        className={style.shortener__container}
+        variants={variants}
+        initial='hidden'
+        animate={inView ? 'shown' : 'hidden'}
+        ref={ref}
+      >
         <ShortenerForm
           onSubmit={handleSumbit}
           onChange={handleChange}
           value={urlToShorten}
           errorMessage={errorMessage}
         />
-        <ShortenerList shortenedLinks={shortenedLinks} />
-      </div>
+        <ShortenerList shortenedLinks={shortenedLinks} variants={variants} />
+      </motion.div>
     </section>
   )
 }
