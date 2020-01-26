@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="header"
+>
+  <a
+    href="/"
+  >
+    <test-file-stub
+      className="undefined"
+    />
+  </a>
+  <nav
+    className="navMobile"
+  >
+    <button
+      className="hamburger"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <svg
+        height="25"
+        viewBox="0 0 25 25"
+        width="25"
+      >
+        <path
+          d="M 2 4 L 23 4"
+          fill="transparent"
+          stroke="var(--gray-500)"
+          strokeWidth="3"
+          style={Object {}}
+        />
+        <path
+          d="M 2 12.5 L 23 12.5"
+          fill="transparent"
+          opacity={1}
+          stroke="var(--gray-500)"
+          strokeWidth="3"
+          style={Object {}}
+        />
+        <path
+          d="M 2 21 L 23 21"
+          fill="transparent"
+          stroke="var(--gray-500)"
+          strokeWidth="3"
+          style={Object {}}
+        />
+      </svg>
+      <span
+        className="visually-hidden"
+      >
+        Open/close menu
+      </span>
+    </button>
+    <div
+      className="navMobile__dropdown"
+      style={
+        Object {
+          "clipPath": "circle(0% at 110% -10%)",
+        }
+      }
+    >
+      <ul
+        className=""
+      >
+        <li>
+          <a
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="/team"
+          >
+            Team
+          </a>
+        </li>
+        <li>
+          <a
+            href="/price"
+          >
+            Price
+          </a>
+        </li>
+      </ul>
+      <ul
+        className=""
+      >
+        <li>
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li>
+          <a
+            className="button-module button"
+            href="/sign-up"
+          >
+            Sign Up
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+`;

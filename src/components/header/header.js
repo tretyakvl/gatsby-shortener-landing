@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
 import Navigation from '../navigation/navigation'
@@ -6,12 +7,12 @@ import Navigation from '../navigation/navigation'
 import style from './header.module.css'
 import Logo from '../logo/logo'
 
-const Header = ({ navigation }) => {
+export const PureHeader = ({ navigation }) => {
   return (
-    <header
-      className={style.header}
-    >
-      <Link to='/'><Logo /></Link>
+    <header className={style.header}>
+      <Link to='/'>
+        <Logo />
+      </Link>
       <Navigation navigation={navigation} />
     </header>
   )
@@ -23,12 +24,19 @@ export default props => (
       query {
         headerYaml {
           navigation {
-            primary,
+            primary
             login
           }
         }
       }
     `}
-    render={({ headerYaml }) => <Header {...headerYaml} {...props} />}
+    render={({ headerYaml }) => <PureHeader {...headerYaml} {...props} />}
   />
 )
+
+PureHeader.propTypes = {
+  navigation: PropTypes.shape({
+    login: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
+    primary: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
+  }).isRequired
+}

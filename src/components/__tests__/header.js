@@ -1,11 +1,23 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Header from '../header/header'
+import { PureHeader as Header } from '../header/header'
 
 describe('Header', () => {
   it('renders correctly', () => {
+    const data = {
+      primary: [
+        ['About', '/about'],
+        ['Team', '/team'],
+        ['Price', '/price']
+      ],
+      login: [
+        ['Login', '/login'],
+        ['Register', '/register']
+      ]
+    }
+
     const tree = renderer
-      .create(<Header />)
+      .create(<Header navigation={data} />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
