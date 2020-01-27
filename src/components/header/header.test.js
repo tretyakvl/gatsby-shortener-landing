@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { PureHeader as Header } from '../header/header'
+import { PureHeader as Header } from './header'
 
 describe('Header', () => {
   it('renders correctly', () => {

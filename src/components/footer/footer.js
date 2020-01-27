@@ -1,13 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StaticQuery, graphql, Link } from 'gatsby'
-// import PropTypes from 'prop-types'
 
 import Logo from '../logo/logo'
 import Socials from '../socials/socials'
 
 import style from './footer.module.css'
 
-const Footer = ({ groups, social }) => {
+export const PureFooter = ({ groups, social }) => {
   return (
     <footer className={style.footer}>
       <div className={style.footer__container}>
@@ -49,6 +49,18 @@ export default props => (
         }
       }
     `}
-    render={({ footerYaml }) => <Footer {...footerYaml} {...props} />}
+    render={({ footerYaml }) => <PureFooter {...footerYaml} {...props} />}
   />
 )
+
+PureFooter.propTypes = {
+  groups: PropTypes.arrayOf(PropTypes.shape({
+    group: PropTypes.shape({
+      links: PropTypes.arrayOf(PropTypes.array),
+      title: PropTypes.string
+    })
+  })).isRequired,
+  social: PropTypes.shape({
+    links: PropTypes.arrayOf(PropTypes.array)
+  })
+}

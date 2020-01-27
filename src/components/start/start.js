@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 
@@ -28,3 +29,11 @@ const Start = ({ title, cta }) => {
 }
 
 export default Start
+
+Start.propTypes = {
+  title: PropTypes.string.isRequired,
+  cta: PropTypes.shape({
+    to: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+  })
+}

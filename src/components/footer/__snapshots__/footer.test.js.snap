@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footer__container"
+  >
+    <a
+      href="/"
+    >
+      <test-file-stub
+        className="light"
+      />
+    </a>
+    <nav
+      className="footer__navigation"
+    >
+      <section>
+        <h4>
+          Together
+        </h4>
+        <ul>
+          <li>
+            <a
+              href="/we"
+            >
+              We
+            </a>
+          </li>
+          <li>
+            <a
+              href="/all"
+            >
+              All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/lift"
+            >
+              Lift
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          It may be gone
+        </h4>
+        <ul>
+          <li>
+            <a
+              href="/check"
+            >
+              check
+            </a>
+          </li>
+          <li>
+            <a
+              href="/your"
+            >
+              your
+            </a>
+          </li>
+          <li>
+            <a
+              href="/pulse"
+            >
+              pulse
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h4>
+          Regularly
+        </h4>
+        <ul>
+          <li>
+            <a
+              href="/call"
+            >
+              Call
+            </a>
+          </li>
+          <li>
+            <a
+              href="/your"
+            >
+              Your
+            </a>
+          </li>
+          <li>
+            <a
+              href="/grandma"
+            >
+              Grandma
+            </a>
+          </li>
+        </ul>
+      </section>
+      <ul
+        className="socials"
+      >
+        <a
+          href="/purgatory"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="visually-hidden"
+          >
+            Zuccs
+          </span>
+          <test-file-stub />
+        </a>
+        <a
+          href="/are-bend"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="visually-hidden"
+          >
+            Trees
+          </span>
+          <test-file-stub />
+        </a>
+        <a
+          href="/everyone"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="visually-hidden"
+          >
+            Cancel
+          </span>
+          <test-file-stub />
+        </a>
+      </ul>
+    </nav>
+  </div>
+</footer>
+`;

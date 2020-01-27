@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { useMediaQuery } from 'react-responsive'
 
-import Button from '../button/button'
+import Button from '../../button/button'
 import NavMobile from './navMobile'
 import NavDesktop from './navDesktop'
 

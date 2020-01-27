@@ -18,7 +18,7 @@ const Socials = ({ links = [] }) => {
   return (
     <ul className={style.socials}>
       {links.map(([name, href]) => {
-        const CurrIcon = icons[name]
+        const CurrIcon = icons[name] || pinterest
 
         return (
           <a href={href} target='_blank' rel='noopener noreferrer' key={name}>

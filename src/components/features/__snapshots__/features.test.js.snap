@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Features renders correctly 1`] = `
+<section
+  className="features"
+>
+  <div
+    className="features__container"
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateX(-20px) translateZ(0)",
+      }
+    }
+  >
+    <h2
+      className="visually-hidden"
+    >
+      Shortly features
+    </h2>
+    <div
+      className="features__main"
+    >
+      <h3>
+        Take a look at our features!
+      </h3>
+      <p>
+        Our features are very featury
+      </p>
+    </div>
+    <ul
+      className="features__list"
+    >
+      <li>
+        <h3>
+          Cool feature
+        </h3>
+        <p>
+          This is our favourite
+        </p>
+      </li>
+      <li>
+        <h3>
+          Amazing feature
+        </h3>
+        <p>
+          Well, maybe it\`s not true
+        </p>
+      </li>
+      <li>
+        <h3>
+          Unique feature
+        </h3>
+        <p>
+          Call the police if you see someone else list this
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

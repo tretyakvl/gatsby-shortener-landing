@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-import Hamburger from '../hamburger/hamburger.js'
+import Hamburger from './hamburger/hamburger.js'
 
 import style from './navMobile.module.css'
 

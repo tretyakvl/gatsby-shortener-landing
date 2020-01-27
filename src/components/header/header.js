@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
-import Navigation from '../navigation/navigation'
+import Navigation from './navigation/navigation'
 
 import style from './header.module.css'
 import Logo from '../logo/logo'

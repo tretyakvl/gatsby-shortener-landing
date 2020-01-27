@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 
@@ -37,3 +38,14 @@ const Features = ({ title, desc, list }) => {
 }
 
 export default Features
+
+Features.propTypes = {
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  list: PropTypes.arrayOf(PropTypes.shape({
+    item: PropTypes.shape({
+      title: PropTypes.string,
+      desc: PropTypes.string
+    })
+  }))
+}

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Start renders correctly 1`] = `
+<section
+  className="start"
+>
+  <div
+    className="start__container"
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateX(-20px) translateZ(0)",
+      }
+    }
+  >
+    <h2>
+      Start spending with us!
+    </h2>
+    <a
+      className="button-module button"
+      href="/buy-the-product-please"
+    >
+      No refunds, seriously
+    </a>
+  </div>
+</section>
+`;
