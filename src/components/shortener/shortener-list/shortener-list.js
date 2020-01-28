@@ -38,7 +38,7 @@ const Item = ({ original, shortened, variants }) => {
   )
 }
 
-const ShortenerList = ({ shortenedLinks, variants }) => {
+const ShortenerList = ({ shortenedLinks = [], variants = {} }) => {
   return (
     <ul className={style.shortener__list}>
       <AnimatePresence>

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShortenerList renders correctly with three items 1`] = `
+<ul
+  className="shortener__list"
+>
+  <li
+    className="shortener__item"
+    style={Object {}}
+  >
+    <span>
+      https://www.google.com
+    </span>
+    <a
+      href="https://www.google.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      https://www.google.com
+    </a>
+    <button
+      className="button-module button square thin400"
+      onClick={[Function]}
+    >
+      copy
+    </button>
+  </li>
+  <li
+    className="shortener__item"
+    style={Object {}}
+  >
+    <span>
+      https://www.amazon.com
+    </span>
+    <a
+      href="https://www.amazon.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      https://www.amazon.com
+    </a>
+    <button
+      className="button-module button square thin400"
+      onClick={[Function]}
+    >
+      copy
+    </button>
+  </li>
+  <li
+    className="shortener__item"
+    style={Object {}}
+  >
+    <span>
+      https://www.google.ru
+    </span>
+    <a
+      href="https://www.google.ru"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      https://www.google.ru
+    </a>
+    <button
+      className="button-module button square thin400"
+      onClick={[Function]}
+    >
+      copy
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`ShortenerList renders correctly with zero items 1`] = `
+<ul
+  className="shortener__list"
+/>
+`;

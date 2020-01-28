@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shortener renders correctly with zero links 1`] = `
+<section
+  className="shortener"
+>
+  <div
+    className="shortener__container"
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateX(-20px) translateZ(0)",
+      }
+    }
+  >
+    <form
+      className="form"
+      onSubmit={[Function]}
+    >
+      <div
+        className="form__notificator "
+      >
+        <input
+          id="shortener-url"
+          onChange={[Function]}
+          placeholder="Shorten a link here..."
+          type="text"
+          value=""
+        />
+        <span>
+          
+        </span>
+      </div>
+      <button
+        className="button-module button square thin500"
+      >
+        Shorten it!
+      </button>
+    </form>
+    <ul
+      className="shortener__list"
+    />
+  </div>
+</section>
+`;
