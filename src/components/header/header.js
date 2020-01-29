@@ -11,6 +11,7 @@ export const PureHeader = ({ navigation }) => {
   return (
     <header className={style.header}>
       <Link to='/'>
+        <span className='visually-hidden'>Home</span>
         <Logo />
       </Link>
       <Navigation navigation={navigation} />

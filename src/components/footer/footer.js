@@ -11,7 +11,10 @@ export const PureFooter = ({ groups, social }) => {
   return (
     <footer className={style.footer}>
       <div className={style.footer__container}>
-        <Link to='/'><Logo type='light' /></Link>
+        <Link to='/'>
+          <span className='visually-hidden'>Home</span>
+          <Logo type='light' />
+        </Link>
         <nav className={style.footer__navigation}>
           {groups.map(({ group }, i) => (
             <section key={i}>

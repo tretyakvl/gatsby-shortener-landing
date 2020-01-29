@@ -21,10 +21,12 @@ const Socials = ({ links = [] }) => {
         const CurrIcon = icons[name] || pinterest
 
         return (
-          <a href={href} target='_blank' rel='noopener noreferrer' key={name}>
-            <span className='visually-hidden'>{name}</span>
-            <CurrIcon />
-          </a>
+          <li className={style.socials__item} key={name}>
+            <a href={href} target='_blank' rel='noopener noreferrer'>
+              <span className='visually-hidden'>{name}</span>
+              <CurrIcon />
+            </a>
+          </li>
         )
       })}
     </ul>

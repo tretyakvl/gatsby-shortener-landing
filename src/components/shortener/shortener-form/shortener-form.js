@@ -15,6 +15,9 @@ const ShortenerForm = ({
   return (
     <form className={style.form} onSubmit={onSubmit}>
       <div className={`${style.form__notificator} ${errorClass}`}>
+        <label htmlFor='shortener-url' className='visually-hidden'>
+          Enter a link you'd like to short
+        </label>
         <input
           type='text'
           id='shortener-url'

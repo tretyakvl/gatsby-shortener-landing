@@ -9,12 +9,14 @@
   list-style: none;
 }
 
-.socials a {
-  padding: 0.5rem;
+.socials__item + .socials__item {
+  margin-top: 0;
+  margin-left: 0.5rem;
 }
 
-.socials a + a {
-  margin-left: 0.5rem;
+.socials a {
+  display: block;
+  padding: 0.5rem;
 }
 
 .socials a path {
