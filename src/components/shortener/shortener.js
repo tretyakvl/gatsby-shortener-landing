@@ -24,6 +24,10 @@ const Shortener = () => {
     event.preventDefault()
 
     if (shortenedLinks.some(item => item.original === urlToShorten)) return
+    if (!urlToShorten) {
+      setErrorMessage('Please add a link')
+      return
+    }
 
     try {
       const { original, shortened } = await shortenUrl(urlToShorten)
