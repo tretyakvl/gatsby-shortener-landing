@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { useMediaQuery } from 'react-responsive'
 
@@ -10,6 +10,13 @@ const Navigation = ({ navigation }) => {
   const isWide = useMediaQuery({
     minWidth: '43rem'
   })
+
+  // Fixes gatsby hydration bug
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [isClient])
+  if (!isClient) return null
 
   const NavFields = () => (
     <>
@@ -33,13 +40,13 @@ const Navigation = ({ navigation }) => {
 
   if (isWide) {
     return (
-      <NavDesktop navigation={navigation}>
+      <NavDesktop>
         <NavFields />
       </NavDesktop>
     )
   }
   return (
-    <NavMobile navigation={navigation}>
+    <NavMobile>
       <NavFields />
     </NavMobile>
   )
