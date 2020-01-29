@@ -42,6 +42,7 @@ const Shortener = () => {
     }
   }
   const handleChange = event => setUrlToShorten(event.target.value)
+  const handleFocus = () => setErrorMessage('')
 
   return (
     <section className={style.shortener}>
@@ -55,6 +56,7 @@ const Shortener = () => {
         <ShortenerForm
           onSubmit={handleSumbit}
           onChange={handleChange}
+          onFocus={handleFocus}
           value={urlToShorten}
           errorMessage={errorMessage}
         />

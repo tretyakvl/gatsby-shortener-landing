@@ -1,4 +1,7 @@
 .features {
+  padding-top: 4.7rem;
+  padding-bottom: 4rem;
+
   background-color: var(--gray-300);
 }
 
@@ -117,8 +120,8 @@
 
 @media (min-width: 56.25rem) {
   .features {
-    padding-top: 6rem;
-    padding-bottom: 7.5rem;
+    padding-top: 6.7rem;
+    padding-bottom: 6.5rem;
   }
 
   .features__main {

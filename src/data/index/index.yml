@@ -7,7 +7,7 @@ sections:
     illustration: '../../images/illustration-working.svg'
     cta:
       text: 'Get started'
-      to: '#'
+      to: '/get-started'
   features:
     title: 'Advanced Statistics' desc: 'Track how your links are performing
     across the web with our advanced statistics dashboard.'
@@ -31,4 +31,4 @@ sections:
     title: 'Boost your links today'
     cta:
       text: 'Get started'
-      to: '#'
+      to: '/get-started'

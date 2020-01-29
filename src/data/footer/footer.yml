@@ -3,25 +3,25 @@ groups:
   - group:
       title: 'Features'
       links: 
-        - ['Link Shortening', '#']
-        - ['Branded Links', '#']
-        - ['Analytics', '#']
+        - ['Link Shortening', '/shortening']
+        - ['Branded Links', '/branded']
+        - ['Analytics', '/analytics']
   - group:
       title: 'Resources'
       links: 
-        - ['Blog', '#']
-        - ['Developers', '#']
-        - ['Support', '#']
+        - ['Blog', '/blog']
+        - ['Developers', '/devs']
+        - ['Support', '/support']
   - group:
       title: 'Company'
       links: 
-        - ['About', '#']
-        - ['Our Team', '#']
-        - ['Careers', '#']
-        - ['Contact', '#']
+        - ['About', '/about']
+        - ['Our Team', '/our-team']
+        - ['Careers', '/careers']
+        - ['Contact', '/contact']
 social:
     links:
-        - ['facebook', '#']
-        - ['twitter', '#']
-        - ['pinterest', '#']
-        - ['instagram', '#']
+        - ['facebook', '/facebbok']
+        - ['twitter', '/twitter']
+        - ['pinterest', '/pinterest']
+        - ['instagram', '/instagram']
