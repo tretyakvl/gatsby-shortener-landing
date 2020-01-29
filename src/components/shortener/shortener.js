@@ -23,8 +23,9 @@ const Shortener = () => {
   const handleSumbit = async event => {
     event.preventDefault()
 
+    console.log(urlToShorten)
     if (shortenedLinks.some(item => item.original === urlToShorten)) return
-    if (!urlToShorten) {
+    if (urlToShorten.length === 0) {
       setErrorMessage('Please add a link')
       return
     }
