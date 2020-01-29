@@ -16,7 +16,7 @@
   justify-content: center;
 }
 
-.not-found__illustration img {
+.not-found__illustration div {
   max-width: 23rem;
 }
 

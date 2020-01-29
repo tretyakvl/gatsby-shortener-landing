@@ -14,12 +14,14 @@ const NotFoundPage = () => {
       <main className={style.notFound}>
         <h1>Page not found</h1>
         <div className={style.notFound__illustration}>
-          <img
-            src={illustration}
-            width='796'
-            height='1074'
-            alt='Illustration of a woman reaching down'
-          />
+          <div>
+            <img
+              src={illustration}
+              width='796'
+              height='1074'
+              alt='Illustration of a woman reaching down'
+            />
+          </div>
           <span>
             404
           </span>
