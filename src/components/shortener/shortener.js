@@ -28,6 +28,10 @@ const Shortener = () => {
       setErrorMessage('Please add a link')
       return
     }
+    if (!urlToShorten.startsWith('https://www.')) {
+      setErrorMessage('Don`t forget https://www')
+      return
+    }
 
     try {
       const { original, shortened } = await shortenUrl(urlToShorten)
