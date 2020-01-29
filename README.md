@@ -6,6 +6,9 @@
 <h1 align="center">
   URL shortening API landing page
 </h1>
+<p align="center">
+  <a href="https://build-f7ba7071-9a01-4755-927f-1ea858c8ce29.gtsb.io/"><b>Live</b></a>
+</p>
 
 Responsive landing page integrated with [rel.ink](https://rel.ink/) API. The project built with [Gatsby](https://www.gatsbyjs.org/) as part of the [frontendmentor.io](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) challenge.
 
