@@ -18,11 +18,7 @@ Responsive landing page integrated with [rel.ink](https://rel.ink/) API. The pro
 ## Features
 
 *  Provides optimal layout according to the window size
-
 *  Shortens any valid url using [rel.ink](https://rel.ink/) API
-
 *  Saves and displays list of shortened links even between sessions
-
 *  Ability to copy shortened links to the clipboard with button click
-
 *  Displays an error message when URL is not valid
